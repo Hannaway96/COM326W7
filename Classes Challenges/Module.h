@@ -12,6 +12,7 @@ private:
 public:
 	Module();
 	Module(std::string moduleTitle, std::string moduleCode, int moduleCreditPoints, int moduleMark);
+	~Module();
 
 	std::string getModuleTitle() const;
 	void setModuleTitle(std::string);

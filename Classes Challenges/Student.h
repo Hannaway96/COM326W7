@@ -24,6 +24,7 @@ private:
 	std::string registrstionID_;
 	std::string course_;
 	int yearofStudy_;
+	static unsigned int studentCount_;
 
 	std::vector<Module> moduleMarks_{};
 
@@ -43,6 +44,8 @@ public:
 	Student(std::string name, std::string registration, std::string course, int yearofStudy);
 
 	Student(std::string name);
+
+	~Student();
 
 	//Getters and setters for each member variable
 	void SetName(std::string name);
@@ -68,5 +71,5 @@ public:
 	std::string Student::CalculateClassification() const;
 	//std::string Student::CalculateClassification();
 	
-
+	static int GetEnrolled();
 };

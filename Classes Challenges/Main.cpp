@@ -17,8 +17,13 @@ using namespace std;
 int main() {
 
 	Student stu1("Jeni Watt", "B004568656", "BSc Computing", 1);
+	cout << "Number of students: " << stu1.GetEnrolled() << endl;
+
 	Student stu2("Frank Lyons");
+	cout << "Number of students: " << stu2.GetEnrolled() << endl;
+
 	Student stu3;
+	cout << "Number of students: " << stu3.GetEnrolled() << endl;
 
 	Module module { "Software testing for beginners", "TES101", 20, 80 };
 	Module module2 { "Software testing for beginners", "BAK101", 20, 80 };
@@ -32,6 +37,8 @@ int main() {
 	stu3.SetCourse("BSc Geology");
 	stu3.SetRegistrationID("B004556565");
 	stu3.SetYearofStudy(3);
+
+	cout << "Number of students: " << stu3.GetEnrolled() << endl;
 
 	return 0;
 }

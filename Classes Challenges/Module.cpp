@@ -1,11 +1,14 @@
 #include "Module.h"
-
+#include <iostream>
 
 Module::Module()
 {
 }
 Module::Module(std::string moduleTitle, std::string moduleCode, int moduleCreditPoints, int moduleMark) :
-	moduleTitle_{ moduleTitle }, moduleCode_{ moduleCode }, moduleCreditPoints_{ moduleCreditPoints }, moduleMark_{ moduleMark } {}
+	moduleTitle_{ moduleTitle }, moduleCode_{ moduleCode }, moduleCreditPoints_{ moduleCreditPoints }, moduleMark_{ moduleMark }
+{std::cout << "Customer Constructor called for Module class on " << this->getModuleTitle() << std::endl;}
+
+Module::~Module() { std::cout << "Destructor of Module Class called on " << this->getModuleTitle() << std::endl; }
 
 std::string Module::getModuleTitle() const{
 	return moduleTitle_;
@@ -36,3 +39,4 @@ int  Module::getModuleCreditPoints() const {
 void  Module::setModuleCreditPoints(int creditPoints) {
 	moduleCreditPoints_ = creditPoints;
 }
+
